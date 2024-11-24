@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//Defining colors
+$base-dark: #111729;
+$base-light: #FFFFFF;
+$gray-dark: #CDD5E0;
+$gray-light: #FFFFFF33;
+$accent-violet: #4036A9;
+$accent-purple: #B4436D;
+
+//Defining type 
+@mixin heading-l {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+@mixin heading-m {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2rem;  
+}
+
+@mixin body {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+@mixin label {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.875rem;
+}
+
+@mixin button-text {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.25rem;
+}
+
+//Layout and styling
+body {
+    background-image: url(../images/background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 16px 72px 0 72px;
+}
+
+header {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+        @include heading-l();
+        color: $base-light;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+        margin-top: 3.5rem;
+    }
+    
+    h2 {
+        @include heading-m();
+        color: $base-light;
+        margin-bottom: 4.5rem;
+    }
+}
+
+form {
+    width: 70%;
+    min-width: 790px;
+    margin: 0 auto;
+    background-color: $gray-light;
+    padding: 40px 32px 40px 32px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    label {
+        @include label();
+        color: $base-light;
+        display: block;
+        margin-bottom: .5rem;
+    }
+
+    input, select {
+        width: 100%;
+        display: block;
+        height: 64px;
+        border-radius: 16px;
+        border: none;
+        @include body();
+        padding-left: 24px;
+        color: $base-dark;
+    }
+
+    textarea {
+        width: 100%;
+        border-radius: 16px;
+        border: none;
+        @include body();
+        padding: 24px 0 0 24px;
+        color: $base-dark;
+    }
+
+    input::placeholder, 
+    select::placeholder, 
+    textarea::placeholder {
+        color: $base-dark;
+    }
+
+    select {
+        appearance: none;
+        background-image: url(../images/Expand_down.svg);
+        background-repeat: no-repeat;
+        background-position: right 20px top 50%;
+    }
+
+    button {
+        @include button-text();
+        color: $accent-violet;
+        background-color: $base-light;
+        border: none;
+        border-radius: 16px;
+        height: 64px;
+
+        transition: background-color .3s ease-out; // global
+        -moz-transition: background-color .3s ease-out; // for mozilla
+        -o-transition: background-color .3s ease-out; // for opera
+        -webkit-transition: background-color .3s ease-out; //for webkit, chrome or safari
+
+        &:hover {
+            background-color: $accent-violet;
+            color: $base-light;
+        }
+    }
+
+    .line-1 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        .name-container, .email-container {
+            flex-grow: 1;
+        }   
+    }
+
+    .line-2 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        .company-container, .subject-container {
+            flex-grow: 1;
+        }
+
+    }
+
+}
+
+@media (max-width: 940px) {
+    body {
+        padding: 16px 16px 0 16px;
+    }
+
+    header {
+        width: 80%;
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1rem;
+        }
+    }
+
+    form {
+        width: 100%;
+        min-width: auto;
+
+        .line-1 {
+            flex-direction: column;
+        }
+
+        .line-2 {
+            flex-direction: column;
+        }
+    }
+
+}

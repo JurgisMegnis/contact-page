@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&family=Space+Mono&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="resources/styles/style.css">
+        <title>Contact page</title>
+    </head>
+    <body>
+        <div class="logo">
+            <img src="resources/images/Logo.svg" alt="Becv logo in svg">
+        </div>
+        <header>
+            <h1>Interested in our business pricing?</h1>
+            <h2>Fill out the form to view details and we’ll contact you as soon as possible.</h2>
+        </header>
+        <form action="">
+            <div class="line-1">
+                <div class="name-container">
+                    <label for="fullName">Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Ethan Johnson">
+                </div>
+                <div class="email-container">
+                    <label for="companyEmail">Company Email</label>
+                    <input type="email" id="companyEmail" name="companyEmail" placeholder="ethan@johnson.com">
+                </div>
+            </div>
+
+            <div class="line-2">
+                <div class="company-container">
+                    <label for="companySize">Company Size</label>
+                    <select name="companySize" id="companySize">
+                        <option value="0-50-emp">0-50 employees</option>
+                        <option value="50-100-emp" selected>50-100 employees</option>
+                        <option value="above-100-emp">More than 100 employees</option>
+                    </select>
+                </div>
+                <div class="subject-container">
+                    <label for="subject">Subject</label>
+                    <select name="subject" id="subject">
+                        <option value="landing-pages" selected>Building landing pages</option>
+                        <option value="web-apps">Web app development</option>
+                        <option value="social-media">Social media marketing&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                    </select>
+                </div>
+            </div>  
+
+            <div class="message-container">
+                <label for="message">Message</label>
+                <textarea name="text" id="message" placeholder="50-100 employees" rows="10"></textarea>
+            </div>
+
+            <button type="submit">Contact sales</button>
+        </form>
+    </body>
+</html>
