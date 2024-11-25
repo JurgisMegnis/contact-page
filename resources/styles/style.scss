@@ -53,6 +53,7 @@ body {
     background-image: url(../images/background.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
     padding: 16px 72px 0 72px;
 }
 
@@ -79,6 +80,7 @@ header {
 form {
     width: 70%;
     min-width: 790px;
+    max-width: 1200px;
     margin: 0 auto;
     background-color: $gray-light;
     padding: 40px 32px 40px 32px;
